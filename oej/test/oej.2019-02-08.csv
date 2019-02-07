@@ -1,0 +1,15 @@
+out-lodelid;out-doi;out-title_id;out-unitid;out-rtype;out-mime;in-size;in-url;comment
+1877;10.4000/socio.1877;socio;socio/1877;ARTICLE;HTML;12000;http://socio.revues.org/1877;ancien nom de domaine
+1882;10.4000/socio.1882;socio;socio/1882;ARTICLE;PDF;12000;http://socio.revues.org/pdf/1882;ancien nom de domaine
+3061;10.4000/socio.3061;socio;socio/3061;ARTICLE;HTML;12000;http://journals.openedition.org/socio/3061;article normal
+370;10.4000/crau.370;crau;crau/370;ARTICLE;PDF;12000;http://journals.openedition.org/crau/pdf/370;article pdf
+;;;;;;5000;http://journals.openedition.org/socio/3061;taille non probable pour un article
+;;;;;;5000;http://journals.openedition.org/archipel/393?format=pdfepub&norecordurl=1;à exclure, présence norecordurl
+3515;10.4000/vertigo.3515;vertigo;vertigo/3515;ARTICLE;PDF;12000;http://journals.openedition.org/vertigo/3515?file=1;autre format pour le pdf d'un article
+;;;;;;;;
+6962;10.4000/vertigo.6962;vertigo;vertigo/6962;ARTICLE;HTML;12000;http://journals.openedition.org/vertigo/6962?lang=fr;article avec paramètre de langue dans query
+;;;;;;;http://journals.openedition.org/vertigo/6962?format=licence;à exclure, format=licence
+;;;;;;;http://journals.openedition.org/vertigo/signaler16766?lang=en;à exclure, présence de signaler
+;;;;;;;http://journals.openedition.org/anatoliaantiqua/?lang=en&page=informations ;à exclure, page=informations
+;;;;;;;http://journals.openedition.org/agon/index.html?page=years&year=2015;à exclure, page=years
+;;;;;;;http://journals.openedition.org/textyles/index.html?page=reviews&sortby=author ;à exclure, page=reviews
