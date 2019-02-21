@@ -37,25 +37,23 @@ module.exports = new Parser(function analyseEC(parsedUrl, ec) {
     return result;
   }
   
-  
-  
-  if ((match = /^(\/[a-z-]+)?\/(epub|pdf)\/([0-9]+)$/i.exec(path)) !== null) {
+// journal'name may contain numbers : [a-z-] changed to [a-z0-9-]	  
 
+  if ((match = /^(\/[a-z0-9-]+)?\/(epub|pdf)\/([0-9]+)$/i.exec(path)) !== null) {
 
-  // AD : no epub on article, only for publication replace (epub|pdf) by pdf
+  // AD : no epub on article, only for publication, replace (epub|pdf) by pdf
 
     // http://socio.revues.org/pdf/1882
     // http://journals.openedition.org/crau/pdf/370
 
     result.rtype    = 'ARTICLE';
-    // AD : result.mime     = match[2].toUpperCase();
-    result.mime     = 'PDF';
-    result.lodelid  = match[2];
+    result.mime     = match[2].toUpperCase();
+    result.lodelid  = match[3];
     result.title_id = match[1] ? match[1].substr(1) : host.split('.')[0];
-    result.unitid   = `${result.title_id}/${match[2]}`;
-    result.doi      = `${doiPrefix}/${result.title_id}.${match[2]}`;
+    result.unitid   = `${result.title_id}/${match[3]}`;
+    result.doi      = `${doiPrefix}/${result.title_id}.${match[3]}`;
 
-  } else if ((match = /^(\/[a-z-]+)?\/([0-9]+)$/i.exec(path)) !== null) {
+  } else if ((match = /^(\/[a-z0-9-]+)?\/([0-9]+)$/i.exec(path)) !== null) {
     // http://socio.revues.org/1877
     // http://journals.openedition.org/socio/3061
 	// http://journals.openedition.org/vertigo/3515?file=1
